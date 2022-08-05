@@ -1,0 +1,17 @@
+{
+  "name": "user-service",
+  "version": "1.0.0",
+  "description": "This is the service that use to invoke the user progress logically",
+  "main": "index.js",
+  "repository": "https://github.com/sonpx98/take-note-app-microservice/user-service",
+  "author": "sonpx130998",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.6.4",
+    "typescript": "^4.7.4"
+  }
+}
