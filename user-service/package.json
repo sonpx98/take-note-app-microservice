@@ -6,12 +6,20 @@
   "repository": "https://github.com/sonpx98/take-note-app-microservice/user-service",
   "author": "sonpx130998",
   "license": "MIT",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/app.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/app.js\""
+  },
   "dependencies": {
     "express": "^4.18.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/node": "^18.6.4",
+    "concurrently": "^7.3.0",
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.19",
     "typescript": "^4.7.4"
   }
 }
