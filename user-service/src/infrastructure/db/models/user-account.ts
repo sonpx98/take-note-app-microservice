@@ -2,11 +2,19 @@ import { DataTypes, Model, InferAttributes, InferCreationAttributes, CreationOpt
 import Role from '@base/user-service/model/role';
 import sequelizeConnection from '@base/user-service/db/config';
 
+export interface userAccountI {
+  id?: number;
+  fullName: string;
+  email: string;
+  // roleId: number;
+  createdAt: Date;
+  updateAt: Date;
+}
 class UserAccount extends Model<InferAttributes<UserAccount>, InferCreationAttributes<UserAccount>> {
   declare id: CreationOptional<number>;
   declare fullName: string;
   declare email: string;
-  declare roleId: ForeignKey<Role['id']>;
+  // declare roleId: ForeignKey<Role['id']>;
   declare createdAt: CreationOptional<Date>;
   declare updatedAt: CreationOptional<Date>;
 }

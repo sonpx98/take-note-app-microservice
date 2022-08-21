@@ -1,3 +1,3 @@
-import routes from './user';
+import userRoutes from '@base/user-service/routes/user-router/user';
 
-export { routes as userRoutes }
+export { userRoutes };

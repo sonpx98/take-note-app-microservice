@@ -1,10 +1,9 @@
-import { UserAccount, Role } from '@base/user-service/model';
-import sequelizeConnection from '@base/user-service/db/config';
+import { UserAccount } from '@base/user-service/model';
 
-const isDev = process.env.NODE_ENV === 'development';
-
-const dbInit = () => {
-  sequelizeConnection.sync({ alter: isDev });
+const dbInit = async () => {
+  UserAccount.sync({ alter: process.env.NODE_ENV === 'development' })
+    .then(() => console.log('user account were synchronized successfully.'))
+    .catch((error) => console.error(error));
 };
 
 export default dbInit;

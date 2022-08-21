@@ -2,24 +2,26 @@ import { DataTypes, InferAttributes, InferCreationAttributes, CreationOptional, 
 import sequelizeConnection from '@base/user-service/db/config';
 
 class Role extends Model<InferAttributes<Role>, InferCreationAttributes<Role>> {
-    declare id: CreationOptional<number>
-    declare title: string
+  declare id: CreationOptional<number>;
+  declare title: string;
 }
 
-Role.init({
-    id:{
-        type: DataTypes.INTEGER.UNSIGNED,
-        autoIncrement: true,
-        primaryKey: true,
+Role.init(
+  {
+    id: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      autoIncrement: true,
+      primaryKey: true,
     },
     title: {
-        type: DataTypes.STRING,
-    }
-}, {
+      type: DataTypes.STRING,
+    },
+  },
+  {
     timestamps: true,
     sequelize: sequelizeConnection,
-    paranoid: true
-}
-)
+    paranoid: true,
+  }
+);
 
-export default Role
+export default Role;
